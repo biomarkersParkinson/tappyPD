@@ -1,10 +1,10 @@
 
 <p align="center">
-  <img src="assets/tappyPD.png" alt="tappyPD logo: finger tapping and leg agility analysis" width="420" />
+  <img src="assets/tappyPD.png" alt="tappyPD logo: finger tapping and leg agility analysis" width="500" />
 </p>
 
 
-<h3 align="center">Video-based quantification of motor characteristics in Parkinson's disease</h3>
+<h2 align="center">Video-based quantification of motor characteristics in Parkinson's disease</h2>
 
 <p align="center">
   <a href="#installation">Installation</a> ·
