@@ -1,5 +1,14 @@
 
-### tappyPD: Quantifying Motor Characteristics in Parkinson's Disease Using Computer Vision Techniques
+### tappyPD: An Open-Source Tool for Video-Based Quantification of Motor Characteristics in Parkinson's Disease
+
+<p align="center">
+  <img src="assets/FT.gif" width="60%" />
+</p>
+
+<p align="center">
+  <img src="assets/LA.gif" width="60%" />
+</p>
+
 
 This repository contains the official implementation of our papers:  
 **[Interpretable and Granular Video-Based Quantification of Motor Characteristics from the Finger Tapping Test in Parkinson's Disease](https://doi.org/10.1038/s41531-026-01307-w).**
@@ -11,14 +20,6 @@ Radboud University, Donders Institute for Brain, Cognition and Behaviour
 
 ---
 
-
-<p align="center">
-  <img src="assets/FT.gif" width="60%" />
-</p>
-
-<p align="center">
-  <img src="assets/LA.gif" width="60%" />
-</p>
 ## 📂 Repository Structure
 
 ```
