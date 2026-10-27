@@ -1,22 +1,54 @@
 
-### tappyPD: An Open-Source Tool for Video-Based Quantification of Motor Characteristics in Parkinson's Disease
+<p align="center">
+  <img src="assets/tappyPD.png" alt="tappyPD logo: finger tapping and leg agility analysis" width="420" />
+</p>
+
+<h1 align="center">tappyPD</h1>
 
 <p align="center">
-  <img src="assets/FT.gif" width="60%" />
+  <strong>Video-based quantification of motor characteristics in Parkinson's disease</strong>
 </p>
 
 <p align="center">
-  <img src="assets/LA.gif" width="60%" />
+  <a href="#installation">Installation</a> ·
+  <a href="#usage">Usage</a> ·
+  <a href="#publications">Publications</a> ·
+  <a href="#citation">Citation</a> ·
+  <a href="LICENSE">License</a>
 </p>
 
+tappyPD is an open-source tool for analyzing finger tapping and leg agility from MDS-UPDRS video. It extracts movement keypoints, computes motor characterisitics measures, and supports visualization.
+
+## Demo previews
+
+<table>
+  <tr>
+    <th>Finger tapping</th>
+    <th>Leg agility</th>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/FT.gif" alt="Finger tapping analysis demo" width="100%" /></td>
+    <td width="50%"><img src="assets/LA.gif" alt="Leg agility analysis demo" width="100%" /></td>
+  </tr>
+</table>
+
+## Publications
 
 This repository contains the official implementation of our papers:  
+
+### Finger tapping
+
 **[Interpretable and Granular Video-Based Quantification of Motor Characteristics from the Finger Tapping Test in Parkinson's Disease](https://doi.org/10.1038/s41531-026-01307-w).**
+
+Tahereh Zarrat Ehsan, Michael Tangermann, Yağmur Güçlütürk, S. Shin, K. C. Ho, Bastiaan R. Bloem, Luc J. W. Evers  
+*npj Parkinson's Disease*, 2026.
+
+### Leg agility
 
 **[Video-based quantification of leg agility in Parkinson’s disease and its relationship to upper extremity motor impairments](https://doi.org/10.1038/s41531-026-01558-7).**
 
-Tahereh Zarrat Ehsan, Michael Tangermann, Yağmur Güçlütürk, S. Shin, K. C. Ho, Bastiaan R. Bloem, Luc J. W. Evers  
-Radboud University, Donders Institute for Brain, Cognition and Behaviour
+Tahereh Zarrat Ehsan, Michael Tangermann, King Chung Ho, Bastiaan R. Bloem, Luc J. W. Evers  
+*npj Parkinson's Disease*, 2026.
 
 ---
 
@@ -44,13 +76,13 @@ Radboud University, Donders Institute for Brain, Cognition and Behaviour
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/TaherehZarratEhsan/VideoBased-PD-Biomarkers.git
-cd VideoBased-PD-Biomarkers
+git clone https://github.com/biomarkersParkinson/tappyPD.git
+cd tappyPD
 ```
 
 ### Conda
@@ -60,8 +92,8 @@ conda activate pd_marker
 ```
 
 ---
-## ▶️ Usage
-### 🔹 Part 1: Demo (video => motor quanitification)
+## Usage
+### Part 1: Demo (video → motor quantification)
 
 This demo offers a simple end-to-end example that runs the full analysis pipeline — from a raw video to automatic feature extraction and visualization.
 It can be executed locally without any dataset setup or preprocessing steps from the main implementation.
@@ -189,14 +221,23 @@ More details on the procedure can be found on the [project website](https://www.
 
 ---
 
-## 📚 Citation
+## Citation
 
-If you use this repository in your research, please cite:
+If you use this repository in your research, please cite the relevant paper(s) below.
+
+### Finger tapping
 
 > Zarrat Ehsan, T., Tangermann, M., Güçlütürk, Y., Shin, S., Ho, K. C., Bloem, B. R., & Evers, L. J. W.  
 > *Interpretable and Granular Video-Based Quantification of Motor Characteristics from the Finger-Tapping Test in Parkinson’s Disease.*  
 > **npj Parkinson’s Disease**, 2026.  
 > https://doi.org/10.1038/s41531-026-01307-w
+
+### Leg agility
+
+> Zarrat Ehsan, T., Tangermann, M., Ho, K. C., Bloem, B. R., & Evers, L. J. W.  
+> *Video-based quantification of leg agility in Parkinson’s disease and its relationship to upper extremity motor impairments.*  
+> **npj Parkinson’s Disease**, 2026.  
+> https://doi.org/10.1038/s41531-026-01558-7
 
 ---
 
@@ -209,6 +250,14 @@ If you use this repository in your research, please cite:
   journal = {npj Parkinson's Disease},
   year = {2026},
   doi = {10.1038/s41531-026-01307-w}
+}
+
+@article{zarratehsan2026leg,
+  title = {Video-based quantification of leg agility in {Parkinson's} disease and its relationship to upper extremity motor impairments},
+  author = {Zarrat Ehsan, Tahereh and Tangermann, Michael and Ho, King Chung and Bloem, Bastiaan R. and Evers, Luc J. W.},
+  journal = {npj Parkinson's Disease},
+  year = {2026},
+  doi = {10.1038/s41531-026-01558-7}
 }
 ```
 
