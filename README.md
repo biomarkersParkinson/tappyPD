@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/tappyPD.png" alt="tappyPD logo: finger tapping and leg agility analysis" width="500" />
+  <img src="assets/tappyPD.png" alt="tappyPD logo: finger tapping and leg agility analysis" width="420" />
 </p>
 
 
