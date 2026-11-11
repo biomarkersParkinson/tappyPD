@@ -16,7 +16,7 @@
 
 tappyPD is an open-source tool for analyzing finger tapping and leg agility from MDS-UPDRS video. It extracts movement keypoints, computes motor characterisitics measures, and supports visualization.
 
-## Demo previews
+## 
 
 <table>
   <tr>
