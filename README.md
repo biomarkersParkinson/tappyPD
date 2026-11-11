@@ -63,9 +63,6 @@ Tahereh Zarrat Ehsan, Michael Tangermann, King Chung Ho, Bastiaan R. Bloem, Luc 
 │ ├── 📁 feature_extraction/
 │ │ └── 📄 feature_extraction.py # Computes motor features (amplitude, speed, etc.)
 │ ├── 📄 environment.yml # Conda environment setup
-├── 📁 data/
-│ ├── 📁 raw/ # Raw data and extracted keypoints (.pkl)
-│ └── 📁 processed/ # Processed CSVs and derived feature files
 └── 📘 README.md # Project documentation
 ```
 
