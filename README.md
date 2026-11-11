@@ -62,8 +62,6 @@ Tahereh Zarrat Ehsan, Michael Tangermann, King Chung Ho, Bastiaan R. Bloem, Luc 
 │ │ └── 📄 keypoint_extraction.py # Extracts keypoints 
 │ ├── 📁 feature_extraction/
 │ │ └── 📄 feature_extraction.py # Computes motor features (amplitude, speed, etc.)
-│ ├── 📁 training/
-│ │ └── 📄 optimization_training.py # Model training and evaluation scripts
 │ ├── 📄 environment.yml # Conda environment setup
 ├── 📁 data/
 │ ├── 📁 raw/ # Raw data and extracted keypoints (.pkl)
@@ -90,12 +88,12 @@ conda activate pd_marker
 
 ---
 ## Usage
-### Part 1: Demo (video → motor quantification)
+### video → motor quantification
 
 This demo offers a simple end-to-end example that runs the full analysis pipeline — from a raw video to automatic feature extraction and visualization.
 It can be executed locally without any dataset setup or preprocessing steps from the main implementation.
 
-#### Finger Tapping Demo
+#### Finger Tapping 
 
 📁 Script location
     ```
@@ -112,7 +110,7 @@ Arguments:
 --hand2track: Which hand to analyze (Left or Right)
     ```
 
-#### Leg Agility Demo
+#### Leg Agility 
 
 Script location
     ```
@@ -136,78 +134,6 @@ Arguments:
 --backend: Pose-estimation backend (yolo or metrabs)
 --save_dir: Optional output directory
     ```
-### 🔹 Part 2: Official Implementation of MDS-UPDRS classification
-#### 🔹 Keypoint Extraction
-
-If you want to build your own pickle file (`video_keypoints.pkl`) from raw videos, first prepare a CSV file with the following columns:
-
-- **video_path**: Full path to each video  
-- **score**: Clinical MDS‑UPDRS score 
-- **id**: Patient ID  
-
-Save it in `data/raw/segmented_ft_vid2score.csv`.
-
-The Mediapipe hand landmark model is required to extract keypoints.  
-It will be automatically downloaded on first run from:
-
-[Google Cloud Storage – Mediapipe Hand Landmarker](https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/latest/hand_landmarker.task)
-
-Alternatively, you can download it manually. After download, the file should be located at:
-
-```
-src/preprocessing/hand_landmarker.task
-```
-
-Then run:
-
-```bash
-python src/preprocessing/keypoint_extraction.py
-```
-
-This will:
-- Process all listed videos using Mediapipe’s HandLandmarker  
-- Extract distance‑based signals 
-- Save a dictionary with `video_path`, `distance signal`, `keypoints`, `id`, `label`, and `fps`  
-
-The output will be stored in:
-
-```
-data/raw/video_keypoints.pkl
-```
-#### 🔹 Feature Extraction
-
-After downloading keypoints (or generating) and placing `video_keypoints.pkl` in `data/raw/`, run:
-
-```bash
-python src/feature_extraction/feature_extaction.py
-```
-
-This will extract motor features (amplitude, speed, cycle duration, etc.) and generate:
-
-```
-data/processed/combined_features.csv
-```
-#### 🔹 Model Training and Evaluation
-
-Once you have extracted the features (`data/processed/combined_features.csv`), you can train and evaluate classification models.
-
-Run:
-
-```bash
-python src/training/optimization_training.py
-```
-
-- Saves:
-  - ** results** to:
-    ```
-    data/processed/dynamic_save.csv
-    ```
-  - ** plots of metrics with confidence intervals** to:
-    ```
-    data/processed/<model>_performance_metrics.png
-    ```
-
----
 
     
 ## 📥 Data Access
